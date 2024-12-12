@@ -1,7 +1,7 @@
 name: 'On Create Repository'
 
 on:
-  create:
+  workflow_dispatch:
 
 permissions:
   contents: read
