@@ -2,6 +2,11 @@ name: 'OnPublishECS'
 
 on:  
   workflow_call:
+    inputs:
+      organization:
+        required: true
+      environment:
+        required: true
     secrets:
       tfc-token:
         required: true
@@ -23,10 +28,10 @@ jobs:
     - name: "Terraform Apply"
       uses: cailleach-devops/tfc-shared-actions/.github/actions/tfc/tfc-apply@starter-actions
       with:
-        tfc-organization: "${{ vars.TFC_ORGANIZATION }}"
+        tfc-organization: "${{ inputs.organization }}"
         tfc-token: "${{ secrets.tfc-token }}"
-        tfc-workspace: "aws-ecs-starter-dev"
+        tfc-workspace: "aws-ecs-starter-${{ inputs.environment }}"
         tfc-cfg-directory: ""
         clusterName: ""
         serviceName: ""
-        message: "Creating infrastructure in DEV environment"
+        message: "Creating infrastructure in ${{ inputs.environment }} environment"
