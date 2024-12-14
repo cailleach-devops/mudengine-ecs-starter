@@ -14,7 +14,7 @@ jobs:
     environment: dev
     uses: cailleach-devops/mudengine-ecs-starter/.github/workflows/aws-starter-ecs-publish.yml@main
     with:
-      tfc-organization: "${{ vars.TFC_ORGANIZATION }}"
+      organization: "${{ vars.TFC_ORGANIZATION }}"
       environment: "dev"
     secrets:
       tfc-token: ${{ secrets.TFC_TOKEN }}
@@ -23,7 +23,7 @@ jobs:
     environment: hml
     uses: cailleach-devops/mudengine-ecs-starter/.github/workflows/aws-starter-ecs-publish.yml@main
     with:
-      tfc-organization: "${{ vars.TFC_ORGANIZATION }}"
+      organization: "${{ vars.TFC_ORGANIZATION }}"
       environment: "hml"
     secrets:
       tfc-token: ${{ secrets.TFC_TOKEN }}      
@@ -32,7 +32,7 @@ jobs:
     environment: prd
     uses: cailleach-devops/mudengine-ecs-starter/.github/workflows/aws-starter-ecs-publish.yml@main
     with:
-      tfc-organization: "${{ vars.TFC_ORGANIZATION }}"
+      organization: "${{ vars.TFC_ORGANIZATION }}"
       environment: "prd"
     secrets:
       tfc-token: ${{ secrets.TFC_TOKEN }}      
