@@ -1,0 +1,16 @@
+name: 'OnPushMain'
+
+on:  
+  push:
+    branches:
+      - 'main'
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  node-ecs-publish:
+    uses: CailleachOrg/mudengine-ecs-starter/.github/workflows/aws-starter-ecs-publish.yml@main
+    secrets:
+      tfc-token: ${{ secrets.TFC_TOKEN }}

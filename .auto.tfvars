@@ -1,6 +1,6 @@
 # Uncomment the line below and put the name of the project.
 # That will create a cluster with same name in all environments.
-projectName = <REQUIRED-NAME>
+projectName = "mudengine"
 
 ## Optional configuration:
 ###########################
