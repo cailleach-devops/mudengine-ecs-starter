@@ -11,7 +11,6 @@ permissions:
 
 jobs:
   starter-ecs-dev-publish:
-    runs-on: ubuntu-latest    
     uses: cailleach-devops/mudengine-ecs-starter/.github/workflows/aws-starter-ecs-publish.yml@main
     with:
       organization: "${{ vars.TFC_ORGANIZATION }}"

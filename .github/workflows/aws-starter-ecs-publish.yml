@@ -29,7 +29,7 @@ jobs:
       uses: trstringer/manual-approval@v1
       with:
         secret: ${{ github.TOKEN }}
-        approvers: user1,user2,org-team1
+        approvers: lauramcbryan
         minimum-approvals: 1
         issue-title: "Updating ECS stack in ${{ inputs.environment }} environment"
         issue-body: "Please approve or deny the deployment"
