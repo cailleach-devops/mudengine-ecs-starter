@@ -10,7 +10,7 @@ permissions:
   id-token: write
 
 jobs:
-  starter-ecs-publish:
+  starter-ecs-dev-publish:
     environment: dev
     uses: cailleach-devops/mudengine-ecs-starter/.github/workflows/aws-starter-ecs-publish.yml@main
     with:
@@ -19,7 +19,7 @@ jobs:
     secrets:
       tfc-token: ${{ secrets.TFC_TOKEN }}
 
-  starter-ecs-publish:
+  starter-ecs-hml-publish:
     environment: hml
     uses: cailleach-devops/mudengine-ecs-starter/.github/workflows/aws-starter-ecs-publish.yml@main
     with:
@@ -28,7 +28,7 @@ jobs:
     secrets:
       tfc-token: ${{ secrets.TFC_TOKEN }}      
 
-  starter-ecs-publish:
+  starter-ecs-prd-publish:
     environment: prd
     uses: cailleach-devops/mudengine-ecs-starter/.github/workflows/aws-starter-ecs-publish.yml@main
     with:
