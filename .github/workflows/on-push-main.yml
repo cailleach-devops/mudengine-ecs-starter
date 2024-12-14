@@ -12,32 +12,9 @@ permissions:
 jobs:
   starter-ecs-dev-publish:
     runs-on: ubuntu-latest    
-    environment: dev
-
-    steps:
-      - id: workflowCall
-        name: Calling the workflow
-        uses: cailleach-devops/mudengine-ecs-starter/.github/workflows/aws-starter-ecs-publish.yml@main
-        with:
-          organization: "${{ vars.TFC_ORGANIZATION }}"
-          environment: "dev"
-        secrets:
-          tfc-token: ${{ secrets.TFC_TOKEN }}
-
-  starter-ecs-hml-publish:
-    environment: hml
     uses: cailleach-devops/mudengine-ecs-starter/.github/workflows/aws-starter-ecs-publish.yml@main
     with:
       organization: "${{ vars.TFC_ORGANIZATION }}"
-      environment: "hml"
+      environment: "dev"
     secrets:
-      tfc-token: ${{ secrets.TFC_TOKEN }}      
-
-  starter-ecs-prd-publish:
-    environment: prd
-    uses: cailleach-devops/mudengine-ecs-starter/.github/workflows/aws-starter-ecs-publish.yml@main
-    with:
-      organization: "${{ vars.TFC_ORGANIZATION }}"
-      environment: "prd"
-    secrets:
-      tfc-token: ${{ secrets.TFC_TOKEN }}      
+      tfc-token: ${{ secrets.TFC_TOKEN }}
