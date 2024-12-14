@@ -13,6 +13,6 @@ permissions:
 
 jobs:
   starter-ecs-pull-request:
-    uses: CailleachOrg/mudengine-ecs-starter/.github/workflows/starter-ecs-pull-request.yml@main
+    uses: cailleach-devops/mudengine-ecs-starter/.github/workflows/starter-ecs-pull-request.yml@main
     secrets:
       tfc-token: ${{ secrets.TFC_TOKEN }}
