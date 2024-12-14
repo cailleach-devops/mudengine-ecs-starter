@@ -18,7 +18,7 @@ jobs:
 
       - id: tf-create-workspace-dev
         name: "[DEV] Create Workspace"
-        uses: CailleachOrg/tfc-shared-actions/.github/actions/tfc/tfc-create-workspace@starter-actions
+        uses: CailleachOrg/tfc-shared-actions/.github/actions/tfc/tfc-create-workspace@main
         with:
           workspaceName: "aws-ecs-starter-dev"
           organizationName: ${{ vars.TFC_ORGANIZATION }}
