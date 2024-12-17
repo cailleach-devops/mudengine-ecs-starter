@@ -18,7 +18,7 @@ jobs:
 
       - id: tf-create-workspace-dev
         name: "[DEV] Create Workspace"
-        uses: CailleachOrg/tfc-shared-actions/.github/actions/tfc/tfc-create-workspace@main
+        uses: cailleach-devops/tfc-shared-actions/.github/actions/tfc/tfc-create-workspace@main
         with:
           workspaceName: "aws-ecs-starter-dev"
           organizationName: ${{ vars.TFC_ORGANIZATION }}
@@ -26,7 +26,7 @@ jobs:
           projectId: ${{ vars.DEV_SPACE_PRJ }}
       - id: tf-create-workspace-hml
         name: "[HML] Create Workspace"
-        uses: CailleachOrg/tfc-shared-actions/.github/actions/tfc/tfc-create-workspace@main
+        uses: cailleach-devops/tfc-shared-actions/.github/actions/tfc/tfc-create-workspace@main
         with:
           workspaceName: "aws-ecs-starter-hml"
           organizationName: ${{ vars.TFC_ORGANIZATION }}
@@ -34,7 +34,7 @@ jobs:
           projectId: ${{ vars.HML_SPACE_PRJ }}
       - id: tf-create-workspace-prd
         name: "[PRD] Create Workspace"
-        uses: CailleachOrg/tfc-shared-actions/.github/actions/tfc/tfc-create-workspace@main
+        uses: cailleach-devops/tfc-shared-actions/.github/actions/tfc/tfc-create-workspace@main
         with:
           workspaceName: "aws-ecs-starter-prd"
           organizationName: ${{ vars.TFC_ORGANIZATION }}

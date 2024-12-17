@@ -13,6 +13,6 @@ permissions:
 
 jobs:
   starter-ecs-pull-request:
-    uses: cailleach-devops/tfc-shared-actions/.github/workflows/starter-ecs-pull-request.yml@starter-actions
+    uses: cailleach-devops/tfc-shared-actions/.github/workflows/aws-starter-ecs-pull-request.yml@main
     secrets:
       tfc-token: ${{ secrets.TFC_TOKEN }}
