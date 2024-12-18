@@ -20,4 +20,4 @@ databaseEngine = "postgres"
 
 # Master User to be created in the new database.
 # (The password will be saved under a AWS Secret Manager key)
-databaseMasterUser = "masterMud"
+databaseMasterUser = "masterMudengine"
