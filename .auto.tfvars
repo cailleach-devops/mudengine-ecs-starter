@@ -12,12 +12,12 @@ projectName = "mudengine"
 
 # Enable the flag below to create a database instance.
 # The instance will be created with no schemas besides the master
-#databaseEnable = true
+databaseEnable = true
 
 # If creating a database instance select the engine to be used.
 # Valid values are: postgres, mysql
-#databaseEngine = postgres
+databaseEngine = postgres
 
 # Master User to be created in the new database.
 # (The password will be saved under a AWS Secret Manager key)
-#databaseMasterUser = master
+databaseMasterUser = master
