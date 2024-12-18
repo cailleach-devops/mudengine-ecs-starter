@@ -42,7 +42,7 @@ module "api-initialize" {
 module "database-instance" {
   count = (var.databaseEnable == true ? 1: 0)
   source  = "app.terraform.io/CailleachOrg/rds-initialize/aws"
-  version = "1.0.0"
+  version = "1.0.1"
 
   environment = var.environment
 
