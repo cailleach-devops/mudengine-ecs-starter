@@ -55,3 +55,7 @@ module "database-instance" {
   
   depends_on = [ module.aws-networking ] 
 }
+
+output "projectName" {
+  value = var.projectName
+}
