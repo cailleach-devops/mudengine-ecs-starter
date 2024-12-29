@@ -1,3 +1,4 @@
+/*
 module "aws-networking" {
   source  = "app.terraform.io/CailleachOrg/networking/aws"
   version = "1.0.0"
@@ -55,6 +56,7 @@ module "database-instance" {
   
   depends_on = [ module.aws-networking ] 
 }
+*/
 
 output "projectName" {
   value = var.projectName
