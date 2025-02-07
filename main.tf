@@ -1,6 +1,6 @@
 module "aws-networking" {
   source  = "app.terraform.io/CailleachOrg/networking/aws"
-  version = "1.0.0"
+  version = "1.1.0"
 
   environment = var.environment
 
@@ -12,9 +12,10 @@ module "aws-networking" {
 
 module "ecs-cluster" {
   source  = "app.terraform.io/CailleachOrg/ecs-cluster/aws"
-  version = "2.0.0"
+  version = "2.1.0"
 
   environment = var.environment
+  region = var.region
 
   # ===== DOESN'T change above this line =====
 
