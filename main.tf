@@ -12,7 +12,7 @@ module "aws-networking" {
 
 module "ecs-cluster" {
   source  = "app.terraform.io/CailleachOrg/ecs-cluster/aws"
-  version = "2.1.0"
+  version = "2.1.1"
 
   environment = var.environment
   region = var.region
