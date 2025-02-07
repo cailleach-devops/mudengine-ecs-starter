@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   starter-ecs-dev-publish:
-    uses: cailleach-devops/tfc-shared-actions/.github/workflows/aws-starter-ecs-publish.yml@updateWorkflow
+    uses: cailleach-devops/tfc-shared-actions/.github/workflows/aws-starter-ecs-publish.yml@main
     with:
       organization: "${{ vars.TFC_ORGANIZATION }}"
       environment: "dev"
