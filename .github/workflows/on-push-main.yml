@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   starter-ecs-dev-publish:
-    uses: cailleach-devops/tfc-shared-actions/.github/workflows/aws-starter-ecs-publish.yml@main
+    uses: cailleach-devops/mudengine-ecs-starter/.github/workflows/aws-starter-ecs-publish.yml@main
     with:
       tfc-organization: "${{ vars.TFC_ORGANIZATION }}"
       git-organization: ${{ github.repository_owner }}

@@ -1,0 +1,51 @@
+name: 'StarterECSPushMain'
+
+on:  
+  workflow_call:
+    inputs:
+      tfc-organization:
+        type: string
+        required: true
+      git-organization:
+        required: true
+      environment:
+        type: string
+        required: true
+    secrets:
+      tfc-token:
+        required: true
+      git-token:
+        required: true
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+
+  terraform-apply:
+    runs-on: ubuntu-latest
+
+    steps:
+    - id: checkout
+      name: checkout
+      uses: actions/checkout@v4
+     
+    - id: tfc-apply
+      name: "Terraform Apply"
+      uses: cailleach-devops/tfc-shared-actions/.github/actions/tfc/tfc-starter-apply@main
+      with:
+        tfc-organization: "${{ inputs.tfc-organization }}"
+        tfc-token: "${{ secrets.tfc-token }}"
+        tfc-workspace: "${{ github.event.repository.name }}-${{ inputs.environment }}"
+        message: "Creating infrastructure in ${{ inputs.environment }} environment"
+
+    - name: Save projectName variable
+      if: false
+      uses: cailleach-devops/tfc-shared-actions/.github/actions/git/git-create-org-variable@main
+      with:
+        git-organization: ${{ github.repository_owner }}
+        name: "PROJECT_NAME"
+        value: ${{ steps.tfc-apply.outputs.projectName }}
+        git-token: ${{ secrets.git-token}}
+
