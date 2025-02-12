@@ -13,7 +13,9 @@ jobs:
   starter-ecs-dev-publish:
     uses: cailleach-devops/tfc-shared-actions/.github/workflows/aws-starter-ecs-publish.yml@main
     with:
-      organization: "${{ vars.TFC_ORGANIZATION }}"
+      tfc-organization: "${{ vars.TFC_ORGANIZATION }}"
+      git-organization: ${{ github.repository_owner }}
       environment: "dev"
     secrets:
       tfc-token: ${{ secrets.TFC_TOKEN }}
+      git-token: ${{ secrets.GH_VARIABLE_TOKEN }}
