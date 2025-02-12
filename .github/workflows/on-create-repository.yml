@@ -20,23 +20,23 @@ jobs:
         name: "[DEV] Create Workspace"
         uses: cailleach-devops/tfc-shared-actions/.github/actions/tfc/tfc-create-workspace@main
         with:
-          workspaceName: "aws-ecs-starter-dev"
-          organizationName: ${{ vars.TFC_ORGANIZATION }}
-          token: ${{ secrets.TFC_TOKEN}}
-          projectId: ${{ vars.DEV_SPACE_PRJ }}
+          tfc-workspace: "${{github.event.repository.name}}-dev"
+          tfc-organization: ${{ vars.TFC_ORGANIZATION }}
+          tfc-token: ${{ secrets.TFC_TOKEN}}
+          tfc-project-id: ${{ vars.DEV_SPACE_PRJ }}
       - id: tf-create-workspace-hml
         name: "[HML] Create Workspace"
         uses: cailleach-devops/tfc-shared-actions/.github/actions/tfc/tfc-create-workspace@main
         with:
-          workspaceName: "aws-ecs-starter-hml"
-          organizationName: ${{ vars.TFC_ORGANIZATION }}
-          token: ${{ secrets.TFC_TOKEN}}
-          projectId: ${{ vars.HML_SPACE_PRJ }}
+          tfc-workspace: "${{github.event.repository.name}}-hml"
+          tfc-organization: ${{ vars.TFC_ORGANIZATION }}
+          tfc-token: ${{ secrets.TFC_TOKEN}}
+          tfc-project-id: ${{ vars.HML_SPACE_PRJ }}
       - id: tf-create-workspace-prd
         name: "[PRD] Create Workspace"
         uses: cailleach-devops/tfc-shared-actions/.github/actions/tfc/tfc-create-workspace@main
         with:
-          workspaceName: "aws-ecs-starter-prd"
-          organizationName: ${{ vars.TFC_ORGANIZATION }}
-          token: ${{ secrets.TFC_TOKEN}}
-          projectId: ${{ vars.PRD_SPACE_PRJ }}
+          tfc-workspace: "${{github.event.repository.name}}-prd"
+          tfc-organization: ${{ vars.TFC_ORGANIZATION }}
+          tfc-token: ${{ secrets.TFC_TOKEN}}
+          tfc-project-id: ${{ vars.PRD_SPACE_PRJ }}
